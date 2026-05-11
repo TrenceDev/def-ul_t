@@ -1,0 +1,285 @@
+<HTML>
+	<HEAD>
+		<TITLE>image formation</TITLE>
+	<HEAD>
+	
+	<BODY background="./background image2.jpg"> 
+		
+					
+	</BODY>
+</HTML>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me — TRENCE BORAH</title>
+  <meta name="description" content="About Me page showcasing profile, skills, experience, projects, and contact." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap">
+
+  <style>
+    :root{
+      --text:#f6f7fb;
+      --muted:#b7c0d6;
+      --bg-panel:rgba(20,22,34,0.85);
+      --border:rgba(255,255,255,0.12);
+      --accent:#3b82f6;
+      --accent-2:#10b981;
+      --danger:#ef4444;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--text);
+      background:url('background image2.jpg') no-repeat center center fixed;
+      background-size:cover;
+    }
+    /* Overlay for readability */
+    body::before{
+      content:"";
+      position:fixed; inset:0;
+      background:linear-gradient(180deg, rgba(0,0,0,0.55), rgba(0,0,0,0.35));
+      z-index:-1;
+    }
+
+    .container{
+      max-width:1000px;
+      margin:0 auto;
+      padding:24px;
+    }
+    header{
+      display:flex; align-items:center; gap:22px;
+      background:var(--bg-panel);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px 20px;
+    }
+    .avatar{
+      width:86px; height:86px; border-radius:50%;
+      background:#101528 center/cover no-repeat;
+      border:2px solid var(--border);
+      /* Replace with your photo */
+      background-image:url('logoT.png');
+    }
+    .title-wrap{
+      flex:1;
+    }
+    h1{margin:0; font-size:1.6rem}
+    .subtitle{color:var(--muted); margin-top:6px}
+
+    nav{
+      margin-top:16px;
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .chip{
+      padding:8px 12px; border-radius:10px;
+      background:rgba(255,255,255,0.06);
+      border:1px solid var(--border);
+      color:var(--text); text-decoration:none; font-weight:600;
+    }
+    .chip:hover{background:rgba(255,255,255,0.12)}
+
+    .grid{
+      display:grid; grid-template-columns: 1.3fr 0.7fr;
+      gap:20px; margin-top:20px;
+    }
+    .card{
+      background:var(--bg-panel);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:18px 20px;
+    }
+    .card h2{margin:0 0 10px 0; font-size:1.2rem}
+    .muted{color:var(--muted)}
+
+    .list{display:grid; gap:10px; margin-top:10px}
+    .row{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:12px; padding:10px 12px;
+      border:1px solid var(--border); border-radius:12px;
+      background:rgba(255,255,255,0.05);
+    }
+
+    /* Skills badges */
+    .badges{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .badge{
+      padding:8px 10px; border-radius:10px;
+      background:rgba(59,130,246,0.15);
+      border:1px solid rgba(59,130,246,0.4);
+      color:#dbeafe; font-weight:600; font-size:0.9rem;
+    }
+    .badge.alt{
+      background:rgba(16,185,129,0.15);
+      border-color:rgba(16,185,129,0.4);
+      color:#d1fae5;
+    }
+
+    /* Projects */
+    .project{
+      border:1px solid var(--border);
+      border-radius:12px; padding:12px; margin-top:10px;
+      background:rgba(255,255,255,0.05);
+    }
+    .project-title{font-weight:700}
+    .project a{color:#bfdbfe; text-decoration:none}
+    .project a:hover{color:#93c5fd; text-decoration:underline}
+
+    /* Contact */
+    form{display:grid; gap:10px; margin-top:10px}
+    input, textarea{
+      width:100%; padding:10px 12px; border-radius:10px;
+      border:1px solid var(--border); background:#101528; color:var(--text);
+      outline:none;
+    }
+    textarea{min-height:120px; resize:vertical}
+    .btn{
+      display:inline-block; padding:10px 14px; border-radius:10px;
+      border:1px solid #2454c9; background:linear-gradient(180deg,#2454c9,#1c43a3);
+      color:#fff; font-weight:700; cursor:pointer;
+      text-align:center; text-decoration:none;
+    }
+    .btn.alt{
+      border-color:#16c095; background:linear-gradient(180deg,#16c095,#0e8a6e);
+    }
+
+    footer{
+      margin-top:20px; padding:16px; text-align:center;
+      color:var(--muted);
+    }
+
+    @media (max-width: 960px){
+      .grid{grid-template-columns:1fr}
+      header{flex-direction:column; text-align:center}
+      nav{justify-content:center}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <div class="avatar" aria-label="Profile photo"></div>
+      <div class="title-wrap">
+        <h1>TRENCE BORAH</h1>
+        <div class="subtitle">working as — e.g., Trader | Analyst | Developer | Writer</div>
+        <nav>
+          <a class="chip" href="#about">About</a>
+          <a class="chip" href="#skills">Skills</a>
+          <a class="chip" href="#experience">Experience</a>
+          <a class="chip" href="#projects">Projects</a>
+          <a class="chip" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <div class="grid">
+      <!-- Left column -->
+      <section class="card" id="about">
+        <h2>About</h2>
+        <p>
+   <!--   Write a brief, human intro about yourself. What do you care about? What kind of work lights you up?
+          Mention your core strengths and the outcomes you drive. Keep it honest and specific.-->
+        </p>
+        <p class="muted">
+ <!--tip: Replace the avatar with your photo (your-profile.jpg), and this background with your marble image (background image2.jpg).-->
+        </p>
+
+        <h2 id="skills" style="margin-top:18px;">Skills</h2>
+        <div class="badges">
+          <span class="badge">TradingView</span>
+          <span class="badge">Technical Analysis</span>
+          <span class="badge alt">Risk Management</span>
+          <span class="badge"></span>
+          <span class="badge"></span>
+          <span class="badge alt">Data Visualisation</span>
+        </div>
+
+        <h2 id="experience" style="margin-top:18px;">Experience</h2>
+        <div class="list">
+          <div class="row">
+            <div>
+              <strong>Role — _def0ult_t</strong><br />
+              <span class="muted">12*6 · Sivasagar, Assam</span>
+            </div>
+            <div class="muted">Focus: markets, tools, outcomes</div>
+          </div>
+          <div class="row">
+            <div>
+		<strong>Role — _def0ult_t</strong><br />
+              <span class="muted">Dates · Location</span>
+            </div>
+            <div class="muted">Impact: metrics, wins, learnings</div>
+          </div>
+        </div>
+
+        <h2 id="projects" style="margin-top:18px;">Projects</h2>
+        <div class="project">
+          <div class="project-title">- PhoenixCore
+</div>
+          <div class="muted">One sentence on problem, approach, and result.</div>
+          <div style="margin-top:6px;">
+            <a href="#" target="_blank" rel="noopener">Live demo</a> ·
+            <a href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-title">- BridgePoint
+</div>
+          <div class="muted">One sentence on problem, approach, and result.</div>
+          <div style="margin-top:6px;">
+            <a href="#" target="_blank" rel="noopener">Live demo</a> ·
+            <a href="#" target="_blank" rel="noopener">Source</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Right column -->
+      <aside class="card">
+        <h2>Contact</h2>
+        <p class="muted">Feel free to reach out via the form or the links below.</p>
+        <form onsubmit="event.preventDefault(); alert('Thanks! I will get back to you soon.');">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button class="btn" type="submit">Send message</button>
+        </form>
+
+        <h2 style="margin-top:18px;">Links</h2>
+        <div class="list">
+          <div class="row"><span>LinkedIn</span><a class="btn alt" 
+
+href="#" target="_blank" rel="noopener">View</a></div>
+          <div class="row"><span>GitHub</span><a class="btn alt"
+
+ href="#" target="_blank" rel="noopener">View</a></div>
+          <div class="row"><span>Twitter/X</span><a class="btn alt"
+ 
+href="#" target="_blank" rel="noopener">View</a></div>
+          <div class="row"><span>Email</span><a class="btn alt" 
+
+href="mailto:trence.borah.23@gmail.com">trence.borah.23@gmail.com</a></div>
+          <div class="row"><span>Resume</span><a class="btn alt" 
+
+href="resume.pdf" target="_blank" rel="noopener">Download</a></div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      © <span id="year"></span> Your Name · Built with love and focus.
+    </footer>
+  </div>
+
+  <script>
+    // Current year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
